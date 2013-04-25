@@ -9,11 +9,11 @@
 	<!-- End Of Analytics Code -->	  
 	<script type="text/javascript">
         function toggleCheck (element) {
-			if (element.class === "checked") {
-				element.class = "unchecked";
+			if (element.getAttribute("class") === "checked") {
+				element.setAttribute("class", "unchecked");
 				element.innerHTML = "&#x2610;"
 			} else {
-				element.class = "checked";
+				element.setAttribute("class", "checked");
 				element.innerHTML = "&#x2611;"
 			}
         }
