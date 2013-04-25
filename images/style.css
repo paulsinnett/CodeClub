@@ -1,0 +1,64 @@
+﻿body
+{
+    font-size: 200%;
+}
+
+img.screen
+{
+	border: 0.5em solid Orange;
+}
+
+img.script
+{
+	border: 0.5em solid Orange;
+	background-color: Gray;
+	padding: 1em;
+}
+
+h1
+{
+	background-color: Green;
+	color: White;
+	padding: 1em;
+}
+
+h2
+{
+	background-color: LightBlue;
+	padding: 0.5em;
+}
+
+h3
+{
+	padding: 0.5em;
+	background-color: Green;
+	color: White;
+}
+
+h3.challenge
+{
+	background-color: DarkCyan;
+	color: Yellow;
+}
+
+.activity
+{
+	color: Orange;
+}
+
+.test
+{
+	color: Green;
+}
+
+.save
+{
+	color: Blue;
+}
+
+h4.save
+{
+	padding: 0.5em;
+	background-color: Blue;
+	color: White;
+}
