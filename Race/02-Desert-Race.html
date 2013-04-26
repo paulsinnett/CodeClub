@@ -8,24 +8,24 @@
 	<script type="text/javascript" src="http://stats.hosting24.com/count.php"></script>
 	<!-- End Of Analytics Code -->	  
 	<script type="text/javascript">
-        function toggleCheck (element) {
-			if (element.getAttribute("class") === "checked") {
-				element.setAttribute("class", "unchecked");
-				element.innerHTML = "&#x2610;"
-			} else {
-				element.setAttribute("class", "checked");
-				element.innerHTML = "&#x2611;"
-			}
+        function setCheck(element) {
+			element.setAttribute("onclick", "clearCheck(this)");
+			element.innerHTML = "&#x2611;"
+		}
+		
+		function clearCheck(element) {
+			element.setAttribute("onclick", "setCheck(this)");
+			element.innerHTML = "&#x2610;"
         }
     </script>
   </head>
   <body>
-      <h1>Level 2</h1>
+      <h1>Level<br><span style="font-size: 300%;">2</span></h1>
       <h2>Desert Race</h2>
-      <p>Introduction:</p>
+      <h5>Introduction:</h5>
       <p>This game is a two player game where you race a parrot and a lion across the desert. Each player has to press a key as
       fast as they can to move their animal, the first one to reach the edge of the screen wins.</p>
-      <div width="100%">
+      <div>
         <img class="screen" src="race.gif" alt="screenshot of the completed game" >
       </div>
       <ul>
@@ -46,13 +46,13 @@
       <h4 class="activity">Activity Checklist</h4>
       <ol>
         <li>
-          <p>Select the Stage, and add the desert background.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Select the Stage, and add the desert background.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
         <li>
-          <p>Add a new sprite, select the lion sprite that you will find in the animals folder.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Add a new sprite, select the lion sprite that you will find in the animals folder.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
         <li>
-          <p>Add another sprite, select the parrot sprite that you will find in the animals folder.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Add another sprite, select the parrot sprite that you will find in the animals folder.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
       </ol>
       <h3>STEP 2: Make the lion and the parrot move</h3>
@@ -60,13 +60,13 @@
       <h4 class="activity">Activity Checklist</h4>
       <ol>
         <li>
-          <p>First select the lion sprite and set it to move 4 steps when you press the &lsquo;L&rsquo; key.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>First select the lion sprite and set it to move 4 steps when you press the &lsquo;L&rsquo; key.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
           <div class="script">
             <img class="script" src="key-move-l.gif" alt="image of the script">
           </div>
         </li>
         <li>
-          <p>Next, select the parrot sprite and set it to move 4 steps when you press the &lsquo;A&rsquo; key.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Next, select the parrot sprite and set it to move 4 steps when you press the &lsquo;A&rsquo; key.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
           <div class="script">
             <img class="script" src="key-move-a.gif" alt="image of the script">
           </div>
@@ -74,28 +74,28 @@
       </ol>
       <h4 class="test">Test Your Project</h4>
       <p>Click on the green flag.</p>
-      <p>Do your lion and parrot move across the screen when you press the &lsquo;A&rsquo; and &lsquo;L&rsquo; keys?<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+      <p>Do your lion and parrot move across the screen when you press the &lsquo;A&rsquo; and &lsquo;L&rsquo; keys?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
       <h4 class="save">SAVE YOUR PROJECT</h4>
       <h3>STEP 3: Starting the race</h3>
       <p>We need to have a way to start the race and to know who has won. First we create a start button.</p>
       <h4 class="activity">Activity Checklist</h4>
       <ol>
         <li>
-          <p>Add a new sprite from a file. Choose the button sprite which is inside &ldquo;things&rdquo;.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Add a new sprite from a file. Choose the button sprite which is inside &ldquo;things&rdquo;.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
         <li>
           <p>Edit the costume of the button sprite, add the text &lsquo;start&rsquo; to it and click OK.<br>
-		  Move the sprite to the middle of the stage.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+		  Move the sprite to the middle of the stage.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
         <li>
-          <p>Now add a script that shows the sprite when the project is run:<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Now add a script that shows the sprite when the project is run:<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
           <div class="script">
             <img class="script" src="show-start.gif" alt="image of the script">
           </div>
         </li>
         <li>
           <p>Now we want the button to count down from 3 and then say go and then hide when it is clicked. Add another script like
-          this one:<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          this one:<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
           <div class="script">
             <img class="script" src="countdown.gif" alt="image of the script">
           </div>
@@ -103,30 +103,30 @@
       </ol>
       <h4 class="test">Test Your Project</h4>
       <p>Click on the green flag.</p>
-      <p>When you press the start button does it countdown to the start of the race before disappearing?<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+      <p>When you press the start button does it countdown to the start of the race before disappearing?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
       <h4 class="save">SAVE YOUR PROJECT</h4>
       <p>We only want the racers to move after the race has started and we want to know when the race has finished so we need a
       variable to hold that information.</p>
       <ol>
         <li>
-          <p>Add a variable for all sprites called racing. Untick the box next to it so it does not show on the stage.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Add a variable for all sprites called racing. Untick the box next to it so it does not show on the stage.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
           <div class="script">
             <img class="script" src="racing-variable.png" alt="image of the script">
           </div>
         </li>
         <li>
           <p>Now set racing to be 0 when the project is first started. Change your when flag clicked script from before to look
-          like this:<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          like this:<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
           <div class="script">
             <img class="script" src="show-start-2.gif" alt="image of the script">
           </div>
         </li>
         <li>
-          <p>Next, set the racing variable to be 1 when the starting countdown has finished.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Next, set the racing variable to be 1 when the starting countdown has finished.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
         <li>
           <p>Now we need to stop the lion and the parrot from moving unless the racing variable is set to be 1. Click on the parrot
-          sprite. Add a control block to the script that only allows the parrot to move if racing = 1.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          sprite. Add a control block to the script that only allows the parrot to move if racing = 1.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
           <div class="script">
             <img class="script" src="key-move-a-2.gif" alt="image of the script">
           </div>
@@ -137,7 +137,7 @@
       </ol>
       <h4 class="test">Test Your Project</h4>
       <p>Click on the green flag.</p>
-      <p>Does the lion or the parrot move only after the countdown has finished?<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+      <p>Does the lion or the parrot move only after the countdown has finished?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
       <h4 class="save">SAVE YOUR PROJECT</h4>
       <h3>STEP 4: &mdash; Finishing the race</h3>
       <p>We want to know who wins the race and reset it when it has finished so you can race again.</p>
@@ -145,29 +145,29 @@
       <ol>
         <li>
           <p>Add a block to the parrot&rsquo;s script that sets the racing variable to be 0 when the sprite touches the edge of the
-          screen.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          screen.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
           <div class="script">
             <img class="script" src="key-move-a-3.gif" alt="image of the script">
           </div>
         </li>
         <li>
           <p>Now we want the parrot to let us know if it wins the race. Record a new sound for the Parrot sprite that will be
-          played when the parrot wins. Click sounds and then record the sound of the a parrot winning the race!<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          played when the parrot wins. Click sounds and then record the sound of the a parrot winning the race!<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
         <li>
-          <p>Now add blocks that play the sound you recorded and makes the parrot say it has won:<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Now add blocks that play the sound you recorded and makes the parrot say it has won:<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
           <div class="script">
             <img class="script" src="key-move-a-4.gif" alt="image of the script">
           </div>
         </li>
         <li>
-          <p>Now repeat these steps for the lion.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Now repeat these steps for the lion.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
       </ol>
       <h4 class="test">Test Your Project</h4>
       <p>Click on the green flag.</p>
-      <p>Can you press the start button and race by pressing the &lsquo;A&rsquo; and &lsquo;L&rsquo; keys?<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
-      <p>Do the sprites make their winning sound and say they&rsquo;ve won when they reach the end of the race?<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+      <p>Can you press the start button and race by pressing the &lsquo;A&rsquo; and &lsquo;L&rsquo; keys?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+      <p>Do the sprites make their winning sound and say they&rsquo;ve won when they reach the end of the race?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
       <h4 class="save">SAVE YOUR PROJECT</h4>
       <h3>STEP 5: &mdash; Resetting the game</h3>
       <p>After the race is finished we need to tell the other sprites we have won and reset the game so we can play again.</p>
@@ -175,49 +175,49 @@
       <h4 class="activity">Activity Checklist</h4>
       <ol>
         <li>
-          <p>Click on the Parrot sprite. Add a block that broadcasts &ldquo;finished&rdquo; after the sprite says it has won.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Click on the Parrot sprite. Add a block that broadcasts &ldquo;finished&rdquo; after the sprite says it has won.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
           <div class="script">
             <img class="script" src="key-move-a-5.gif" alt="image of the script">
           </div>
         </li>
         <li>
           <p>Now we need to add a new script that listens for the finished broadcast and moves the parrot back to the start. What
-          happens if you change the value that x is set to?<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          happens if you change the value that x is set to?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
           <div class="script">
             <img class="script" src="restart.gif" alt="image of the script">
           </div>
         </li>
         <li>
           <p>Now add the same script for the lion. Test different x values to make sure the lion and the parrot line up at the
-          start.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          start.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
         <li>
           <p>We also want to put the lion and the parrot in the same position when the project is run, so add another script to
-          each that moves them to the start when we click the flag.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          each that moves them to the start when we click the flag.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
           <div class="script">
             <img class="script" src="start.gif" alt="image of the script">
           </div>
         </li>
         <li>
-          <p>Now click on the button sprite and add a script that shows it when it receives the finished message.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Now click on the button sprite and add a script that shows it when it receives the finished message.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
       </ol>
       <h4 class="test">Test Your Project</h4>
       <p>Click on the green flag.</p>
       <p>Can you race against a friend, one of you moving the parrot by pressing &lsquo;A&rsquo; and the other moving the Lion by pressing
-      &lsquo;L&rsquo;?<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+      &lsquo;L&rsquo;?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
       <h4 class="save">SAVE YOUR PROJECT</h4>
       <p>You have finished the basic activities, well done! Now try this challenge!</p>
       <h3 class="challenge">Challenge: Add a booster!</h3>
       <ul>
         <li>
-          <p>Try and add a booster that you can use once each race that moves the parrot or the lion 30 steps in 1 go.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Try and add a booster that you can use once each race that moves the parrot or the lion 30 steps in 1 go.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
         <li>
-          <p>Add a new costume with fire coming out behind for each sprite and make it appear when the boost is pressed.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Add a new costume with fire coming out behind for each sprite and make it appear when the boost is pressed.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
         <li>
-          <p>Create another sound that the sprite will make when the boost is pressed.<span class="unchecked" style="float:right" onclick="toggleCheck(this)">&#x2610;</span></p>
+          <p>Create another sound that the sprite will make when the boost is pressed.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
         </li>
 		  <div class="script">
 			<img class="script" src="booster.gif" alt="image of the script">
