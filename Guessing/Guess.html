@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+  <head>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" title="style" type="text/css" href="../images/style.css" >
+    <title>What&rsquo;s That?</title>
+	<!-- Hosting24 Analytics Code -->
+	<script type="text/javascript" src="http://stats.hosting24.com/count.php"></script>
+	<!-- End Of Analytics Code -->	  
+	<script type="text/javascript">
+        function setCheck(element) {
+			element.setAttribute("onclick", "clearCheck(this)");
+			element.innerHTML = "&#x2611;"
+		}
+		
+		function clearCheck(element) {
+			element.setAttribute("onclick", "setCheck(this)");
+			element.innerHTML = "&#x2610;"
+        }
+    </script>
+  </head>
+  <body>
+      <h1>Level<br><span style="font-size: 300%;">3</span></h1>
+      <h2>What&rsquo;s That?</h2>
+      <h5>Introduction:</h5>
+      <p>A random object is shown on the blackboard, all distorted. You have to guess what it is by clicking on the right picture below. 
+	  The quicker you guess, the higher your score!</p>
+      <div>
+        <img class="screen" src="screen.png" alt="screenshot of the completed game" >
+      </div>
+      <ul>
+        <li>
+          <p><span class="activity">Activity Checklist</span> &mdash; Follow these <span class="activity">INSTRUCTIONS</span> one by one</p>
+        </li>
+        <li>
+          <p><span class="test">Test Your Project</span> &mdash; Click on the green flag to <span class="test">TEST</span> your code</p>
+        </li>
+        <li>
+          <p><span class="save">Save Your Project</span> &mdash; Click on this to <span class="save">SAVE</span> your work</p>
+        </li>
+      </ul>
+      <h3>STEP 1: Make different things appear on the blackboard</h3>
+      <h4 class="activity">Activity Checklist</h4>
+      <ol>
+        <li>
+          <p>Start a new Scratch project and delete the cat sprite..<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+        </li>
+        <li>
+          <p>Click Stage and then the Backgrounds tab. Import the indoors/chalkboard background.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+        </li>
+        <li>
+          <p>Import a new sprite and give it any costume you like. You can picked some from the things folder.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+        </li>
+        <li>
+          <p>Position the new sprite in the middle of the blackboard. Make it bigger or smaller if you need to.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+        </li>
+        <li>
+          <p>Click the Costumes tab and import four more things. They can be anything you want, yay!<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+        </li>
+		  <div class="script">
+			<img class="script" src="costumes.png" alt="image of the costumes">
+		  </div>
+      </ol>
+	  <p>Let&rsquo;s now make a random picture appear.</p>
+	  <ol>
+		<li>
+			<p>Create this script:</p>
+		  <div class="script">
+			<img class="script" src="random.gif" alt="image of the script">
+		  </div>
+		</li>
+	  </ol>
+      <h4 class="test">Test Your Project</h4>
+      <p>Click on the green flag.</p>
+	  <p>Does the sprite show a different costume?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  <p>Click on it a few more times.</p>
+	  <p>Do you get different costumes every time? Sometimes you&rsquo;ll get the same costume twice in a row, but that&rsquo;s OK. You&rsquo;ll also notice that you can see the sprite flicker as it changes costume. We&rsquo;ll fix that in the next step.</p>
+      <h4 class="save">SAVE YOUR PROJECT</h4>
+	  <h3>STEP 2: Make the pictures distorted</h3>
+      <h4 class="activity">Activity Checklist</h4>
+	  <p>Let&rsquo;s now make a picture distorted when it appears, and become clearer over a few seconds. We&rsquo;ll use a score variable to control how much distortion there is. If the score is high, there will be lots of distortion. As the score goes down, there will be less and less distortion. The score also acts as a timer, like on the Timer Scratch Card.</p>
+      <ol>
+        <li>
+			<p>On the Variables palette, create a variable called Score.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		</li>
+        <li>
+			<p>Change the script to just make to look like this:<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		  <div class="script">
+			<img class="script" src="effects.gif" alt="image of the script">
+		  </div>
+		</li>
+	  </ol>
+	  <p>You should add the hide block at the top and the set [score] to 110 block, and everything below it.</p>
+      <h4 class="test">Test Your Project</h4>
+      <p>Click on the green flag.</p>
+	  <p>Does a random and distorted picture appear?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  <p>Does the distortion get less in stages?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  <p>Does the score go down as the picture becomes less distorted?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  <p>Do you get an undistorted image when the score reaches zero?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  <p>Do you still get a different picture every time you click the green button?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+      <h4 class="save">SAVE YOUR PROJECT</h4>
+	<h3 class="challenge">Things to try</h3>
+	<p>Try changing the starting score and how much it changes each time around the loop. How does this change how the picture looks? Does it make it harder or easier to spot what the picture is?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	<p>Try some different graphic effects from the pull-down lists. How do they change the difficulty?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	<h3>STEP 3: Allow the player to guess the picture</h3>
+      <h4 class="activity">Activity Checklist</h4>
+	  <p>So far we&rsquo;ve got our random picture appearing slowly, and a score which decreases over time, but how do you win the game? We&rsquo;ll add some sprites at the bottom of the screen for the player to click on. If they click on the right one, they win the game. If they click on the wrong one, that sprite disappears and the game carries on.</p>
+	  <p>First, we need to know what the right answer is.</p>
+      <ol>
+        <li>
+			<p>Create a new variable called answer. Make sure it&rsquo;s for all sprites.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		</li>
+        <li>
+			<p>Change the script you&rsquo;ve written to record the right answer. Add the set [answer] to costume # blocks just after the first repeat loop:</p>
+		  <div class="script">
+			<img class="script" src="answer.gif" alt="image of the script">
+		  </div>
+			<p>Now we need to add the sprites that the player can click on.</p><span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		</li>
+        <li>
+			<p>Duplicate the main sprite and drag the duplicate to the bottom left corner of the stage.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		</li>
+        <li>
+			<p>Rename this sprite to answer1. (This makes it easier to talk about.)<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		</li>
+        <li>
+			<p>Delete answer1&rsquo;s script and all its costumes but its first one.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		</li>
+        <li>
+			<p>Do these last three steps again, but put the answer2 sprite next to answer1 and delete all but its second costume.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		</li>
+        <li>
+			<p>Do it three more times for answer3, answer4, and answer5.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		</li>
+	</ol>
+	<p>You should end up with a row of five answer sprites along the bottom of the Stage, each showing a different costume the the main sprite can be. None of the answer sprites should have any scripts.</p>
+		  <div class="script">
+			<img class="script" src="answer-buttons.png" alt="image of the screen">
+		  </div>
+	<p>Now we want to have each sprite respond to being clicked and do something depending on whether its the right answer or not.</p>
+	<ol>
+		<li>
+			<p>Add this script to the answer1 sprite:<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		  <div class="script">
+			<img class="script" src="check-win.gif" alt="image of the script">
+		  </div>
+		</li>
+		<li>
+			<p>Drag this script into each of the other answer sprites. In each sprite, change the 1 to 2, 3, and so on.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		</li>
+		<li>
+			<p>We now have to add something that responds to the won message. Go back to sprite1, the one on the blackboard. Add this extra script:<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		  <div class="script">
+			<img class="script" src="congratulations.gif" alt="image of the script">
+		  </div>
+		</li>
+	</ol>
+      <h4 class="test">Test Your Project</h4>
+      <p>Click on the green flag.</p>
+	  <p>When you test the game, you can use the answer monitor on the stage to tell what
+the right answer is. That&rsquo;s good for testing.</p>
+	  <p>What happens when you click on the right answer?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  <p>What happens to the score when you click on the right answer?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  <p>What happens when you click on the wrong answer?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  <p>What happens to the wrong answer when you start a new game?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  <p>The test shows up two problems. First, wrong guesses don&rsquo;t reappear when the next game starts. Second, the score doesn&rsquo;t stop going down when we get the right answer.</p> 
+	<ol>
+	  <li>
+		<p>To fix the first problem, add this script to each of the five answer sprites:<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		  <div class="script">
+			<img class="script" src="button-start.gif" alt="image of the script">
+		  </div>
+	  </li>
+	</ol>
+	<p>To fix the second problem, we need to stop the question sprite&rsquo;s repeat until loop when the player clicks on the right answer. We&rsquo;ll use a new variable to do that. We&rsquo;ll set it to zero when the game starts and set it to one when the game is won. We&rsquo;ll make the repeat until loop stop when either the score reaches zero OR the game-winning flag is set to one.</p>
+	<ol>
+	  <li>
+		<p>Create a new variable called won?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  </li>
+	  <li>
+		<p>Change the scripts so they look like this:<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+		  <div class="script">
+			<img class="script" src="won.gif" alt="image of the script">
+		  </div>
+	  </li>
+	</ol>
+      <h4 class="save">SAVE YOUR PROJECT</h4>
+	<h5>Well done you&rsquo;ve finished the basic game!</h5>
+	<p>There are more things you can do to your game though. Have a go at these challenges!</p>
+    <h3 class="challenge">Challenge 1: Make the game harder or easier</h3>
+	<p>Change how difficult the game is.</p>
+	<ul>
+	  <li>
+		<p>Try changing how fast the picture is revealed and how fast the score goes down.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  </li>
+	  <li>
+		<p>Try changing the distortions on the picture.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  </li>
+	  <li>
+		<p>Try changing the pictures being guessed, to make them either more similar or more different. If you do this, don&rsquo;t forget to change the answer sprite&rsquo;s costume.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	  </li>
+	</ul>
+    <h4 class="save">SAVE YOUR PROJECT</h4>
+    <h3 class="challenge">Challenge 2: Distort the picture differently in each game</h3>
+	<p>At the moment, each play of the game uses the same distortion. In Step 2, you might have tried some different distortions that work at least as well as the colour + pixelation we used.</p>
+	<p>Find some different distortions that work well. Change the game so that each game uses a different distortion in the repeat until loop.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	<p>Hint: Try creating a new variable, called distortion to use. Set it to a random value at the start of the game. Use if blocks in the body of the repeat until loop to apply the correct distortion for this game.</p>
+    <h4 class="save">SAVE YOUR PROJECT</h4>
+    <h3 class="challenge">Challenge 3: Make a game have a few rounds</h3>
+	<p>At the moment, each game is independent. Change it so that the game proceeds in several rounds. For instance, have one game take three rounds, so the player has to guess three pictures and can score up to 300 points.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	<p>Hint: You&rsquo;ll need an extra variable to store the grand total across all the rounds. You&rsquo;ll also need a loop to go through the different rounds.</p>
+	<p>Hint: You&rsquo;ll also have to make the wrong guesses reappear at the start of each round. Perhaps you could use a broadcast message to do that?</p>
+    <h4 class="save">SAVE YOUR PROJECT</h4>
+    <h3 class="challenge">Challenge 4: Make later rounds more difficult</h3>
+	<p>As you go through different rounds, make the game harder each time.</p>
+	<p>Does each round need to score the same? Should you get more points for guessing quickly in the later, more difficult rounds?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	<p>Hint: How will you know which round you&rsquo;re in? How can you use that to change the difficulty and the score?<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+    <h4 class="save">SAVE YOUR PROJECT</h4>
+    <h3 class="challenge">Challenge 5: Keep playing until the player gets it wrong</h3>
+	<p>Instead of using a fixed number of rounds, keep playing the game until the player doesn&rsquo;t get a picture right. This probably only works if the game gets harder in later rounds.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+    <h4 class="save">SAVE YOUR PROJECT</h4>
+    <h3 class="challenge">Challenge 6: Make the game harder or easier depending on how well the player does</h3>
+	<p>Rather than always making the game harder, make the game adjust the difficulty depending on the skill of the player. If they get the right picture quickly, make the next game a bit harder. If they don&rsquo;t get the right picture, or only get it late, make the next game a bit easier.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	<p>This idea only really works if you don&rsquo;t add up someone&rsquo;s score over several rounds.</p>
+    <h3 class="challenge">Challenge 7: Keep track of the highest score</h3>
+	<p>Keep track of the highest score. If someone manages to beat it, ask for their name and update the highest score. Make sure the highest score, and the name of the person who scored it, are displayed.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+    <h4 class="save">SAVE YOUR PROJECT</h4>
+    <h3 class="challenge">Challenge 8: Make wrong guesses expensive</h3>
+	<p>At the moment, there&rsquo;s no penalty to just clicking on all the answer sprites as quickly as you can. Change the game so that the score goes down a bit every time you make an incorrect guess.<span class="checkbox" onclick="setCheck(this)">&#x2610;</span></p>
+	<p>Does this make the game better?</p>
+    <h4 class="save">SAVE YOUR PROJECT</h4>
+	<h5>Well done you&rsquo;ve finished, now you can enjoy the game!</h5>
+	<p>Don&rsquo;t forget you can share your game with all your friends and family by clicking on Share on the menu bar!</p>
+      <p style="font-size: 50%;"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" ></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+	<p style="font-size: 50%;"><a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a></p>	  
+
+  </body>
+</html>
